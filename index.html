@@ -9,11 +9,11 @@
     <meta content="" name="description">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script defer src="./Components/teamCard.js"></script>
     <script defer src="./Components/services.js"></script>
     <script defer src="./Components/Hero.js"></script>
     <script defer src="./Components/header-component.js"></script>
     <script defer src="./Components/Header.js"></script>
+    <script  src="myComponent.js" defer></script>
 
 
     <!-- Favicon -->
@@ -61,34 +61,8 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a
-                        href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m6!3m5!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"><small
-                            class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Makadi
-                            Bay,hurghada,Egypt</small></a>
-                    <a href="tel:+121212"><small class="me-3 text-light"><i
-                                class="fa fa-phone-alt me-2"></i>+121212</small></a>
-                    <a href="mailto:gmail@gmail.com"><small class="text-light"><i
-                                class="fa fa-envelope-open me-2"></i>gmail@gmail.com</small></a>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://www.facebook.com/www.kiteflyschoohurghada?mibextid=ZbWKwL"><i
-                            class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                        href="https://instagram.com/kite_fly_school_egy?igshid=MzNlNGNkZWQ4Mg=="><i
-                            class="fab fa-instagram fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+    <div id="myComponent"></div>
+
 
 
 
@@ -491,7 +465,13 @@
 
     </script>
 
+<script type="module">
+    // Import the createComponent function
+    import { createComponent } from './Components/ContactNav.js';
 
+    // Call the function to create the component when the page is loaded
+    window.addEventListener('DOMContentLoaded', createComponent);
+</script>
 </body>
 
 </html>
