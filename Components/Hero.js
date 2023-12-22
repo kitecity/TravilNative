@@ -1,9 +1,9 @@
 // Hero.js
 
 const heroContent = {
-    title: "Data to enrich your online business",
-    description: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
-    ctaText: "Get started",
+    title: "Adventure Unleashed Dive into Watersport Thrills.",
+    description: "Explore excitement with Kiteboarding, Windsurfing, Stand up Biddle, and Wakeboarding Water Ski. Thrilling courses and rentals await your watersport adventure.",
+    ctaText: "Start your adventure",
     ctaLink: "#",
     learnMoreText: "Learn more",
     learnMoreLink: "#"
@@ -21,8 +21,7 @@ function generateHeroHTML(content) {
                     <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">${content.title}</h1>
                     <p class="mt-6 text-lg leading-8 text-gray-600">${content.description}</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="${content.ctaLink}" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">${content.ctaText}</a>
-                        <a href="${content.learnMoreLink}" class="text-sm font-semibold leading-6 text-gray-900">${content.learnMoreText} <span aria-hidden="true">→</span></a>
+                        <a href="${content.ctaLink}" class="rounded-2xl bg-indigo-600 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">${content.ctaText}</a>
                     </div>
                 </div>
             </div>
