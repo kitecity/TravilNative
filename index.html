@@ -249,7 +249,7 @@
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
                    
-                    <div  data-service="KiteBoarding+Courses+3h" class="p-2 pt-2  service active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div   class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/14.jpg"
@@ -260,19 +260,27 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div  class="absolute service  top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
-                                Group
-                                <span class="text-yellow-300"> 120$</span>
-                            </div>
-                            <div   class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
-                                Private
-                               <span class="text-yellow-300"> 150$</span>
-                            </div>
+                          
+
+                           
+                        </div>
+                        
+                        <div>
                             <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
                                 Basic <span class="text-black">1</span> Course (3h)
                             </h3>
+
+                            <div class="relative py-2 flex  gap-2 justify-content-center w-full">
+                                <div data-service="KiteBoarding+Courses+3h+group" class=" service   top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                    Group
+                                    <span class="text-yellow-300"> 120$</span>
+                                </div>
+                                <div data-service="KiteBoarding+Courses+3h+private"  class=" service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                    Private
+                                   <span class="text-yellow-300"> 150$</span>
+                                </div>
+                            </div>
                         </div>
-                        <div></div>
                     </div>
                   
                     <div data-service="KiteBoarding+Courses+6h" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
