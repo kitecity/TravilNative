@@ -198,17 +198,17 @@ text-white
 
             <div class="mb-2">
                 <label for="name" class="text-white">Name:</label>
-                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Name" id="name">
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Name" id="name" required>
             </div>
 
             <div class="mb-2">
                 <label for="hotel" class="text-white">Hotel:</label>
-                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Hotel Name" id="hotel">
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" maxlength="50"  placeholder="Hotel Name" id="hotel">
             </div>
             <div class="grid grid-cols-2 gap-4">
                 <div class="grid place-items-center">
                     <label for="date" class="text-white text-center w-full">Date</label>
-                    <input type="date" class="text-white bg-gray-700 p-2 w-full rounded-2xl border-none" placeholder="Date" id="date">
+                    <input type="date" class="text-white bg-gray-700 p-2 w-full rounded-2xl border-none" placeholder="Date" id="date" required>
                 </div>
 
                 <div class="pt-4 grid place-items-center">
@@ -1903,62 +1903,79 @@ text-white
 </script>
 
 <script>
-    // Get all services
-    var services = document.querySelectorAll('.service');
+  // Get all services
+  var services = document.querySelectorAll('.service');
 
-    // Add click event listener to each service
-    services.forEach(function(service) {
-        service.addEventListener('click', function() {
-            // Get the selected service
-            var selectedService = this.getAttribute('data-service');
-            console.log("Selected Service: " + selectedService); // Print the selected service
+  // Add click event listener to each service
+  services.forEach(function(service) {
+      service.addEventListener('click', function() {
+          // Get the selected service
+          var selectedService = this.getAttribute('data-service');
+          console.log("Selected Service: " + selectedService); // Print the selected service
 
-            // Change the URL route with the selected service
-            window.history.pushState(null, null, '?=' + selectedService);
+          // Change the URL route with the selected service
+          window.history.pushState(null, null, '?=' + selectedService);
 
-            // Set the selected service in the form
-            document.getElementById('selected-service').value = selectedService;
+          // Set the selected service in the form
+          document.getElementById('selected-service').value = selectedService;
 
-            // Show the popup form
-            document.getElementById('popup-form-container').style.display = 'block';
-            document.getElementById('popup-form').style.display = 'block';
-        });
-    });
+          // Show the popup form
+          document.getElementById('popup-form-container').style.display = 'block';
+          document.getElementById('popup-form').style.display = 'block';
+      });
+  });
 
-    // Get the form element
-    var form = document.getElementById('servicePopupform');
+  // Get the form element
+  var form = document.getElementById('servicePopupform');
 
-    // Add submit event listener to the form
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+  // Add submit event listener to the form
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
 
-        // Get the form values
-        var service = document.getElementById('selected-service').value;
-        var name = document.getElementById('name').value;
-        var hotel = document.getElementById('hotel').value;
-        var date = document.getElementById('date').value;
+      // Get the form values
+      var name = document.getElementById('name').value;
+      var hotel = document.getElementById('hotel').value;
+      var date = document.getElementById('date').value;
 
-          // Construct the WhatsApp message template
-          var serviceParts = service.split('+');
-          var serviceCategory = serviceParts[0];
-          var serviceDuration = serviceParts[1];
-          var serviceType = serviceParts[2];
+      // Validate the date
+      var currentDate = new Date();
+      var selectedDate = new Date(date);
 
-            var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
+      if (selectedDate < currentDate) {
+        alert('Selected date cannot be in the past');
+        return;
+      }
+      // Validate the form fields
+      if (name.trim() === '') {
+          alert('Name cannot be empty');
+          return;
+      }
 
-            var message = `🚨 New Client 🚨
-            Service: ${serviceWithEmojis}
-            **Name**: ${name} 👦
-            **Hotel**: ${hotel} 🏨
-            **Date**: ${date} 📅
+      // You can add more validation checks for other fields as needed
 
-            **This message is from the website.**`;
+      // Construct the WhatsApp message template
+      var service = document.getElementById('selected-service').value;
+      var serviceParts = service.split('+');
+      var serviceCategory = serviceParts[0];
+      var serviceDuration = serviceParts[1];
+      var serviceType = serviceParts[2];
 
-          // Construct the WhatsApp URL
-          var whatsappURL = `https://api.whatsapp.com/send?phone=+201017040213&text=${encodeURIComponent(message)}`;
-          // Open the WhatsApp URL in a new tab
-          window.open(whatsappURL, '_blank');
-    });
+      var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
+
+      var message = `🚨 New Client 🚨
+      Service: ${serviceWithEmojis}
+      **Name**: ${name} 👦
+      **Hotel**: ${hotel} 🏨
+      **Date**: ${date} 📅
+
+      **This message is from the website.**`;
+
+      // Construct the WhatsApp URL
+      var whatsappURL = `https://api.whatsapp.com/send?phone=+201017040213&text=${encodeURIComponent(message)}`;
+      
+      // Open the WhatsApp URL in a new tab
+      window.open(whatsappURL, '_blank');
+  });
 </script>
 
 
