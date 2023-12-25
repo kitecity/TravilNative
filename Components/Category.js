@@ -3,7 +3,7 @@
     {
       img: "./img/destination-1.jpg",
       title: "Adventure 1",
-    },
+    },  
     {
       img: "./img/destination-8.jpg",
       title: "Adventure 2",
