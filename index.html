@@ -13,7 +13,6 @@
     <script defer src="./Components/header-component.js"></script>
     <script defer src="./Components/Header.js"></script>
 
-    <script  src="myComponent.js" defer></script>
 
 
 
@@ -77,8 +76,10 @@
 
 
 
-    <div style="background-image: url('./img/destination-8.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
-        class="Hero min-h-[700px]" id-"Hero">
+    <div style="background-image: url('./img/destination-8.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+
+    "
+        class="Hero min-h-[700px] " id-"Hero">
 
 
 
@@ -174,15 +175,57 @@
 
 
 
-
-
 <!-- Popup Form -->
-<div id="popup-form" style="display: none;" class="place-item-center grid">
-    <form class="bg-dark rounded-3xl max-w-[1000]">
-      <input type="text" id="selected-service" readonly>
-      <!-- Other form fields -->
-    </form>
-  </div>
+<div  id="popup-form-container" style="display: none;" class="fixed md:bottom-2  bottom-[10%] md:left-2 z-10 text-white bg-gray-900/90 p-2 backdrop-blur-xl rounded-2xl h-[500px] w-full md:w-[300px] flex justify-center items-center">
+    <div id="popup-form" style="display: none;" class="place-item-center pt-12   overflow-hidden grid">
+
+    <div class="w-full  justify-center flex">
+        <div class="h-[90px] absolute top-0 w-[90px]">
+            <img src="./img/svg/aniwats.gif" alt="" 
+             class=" h-full w-full object-cover">
+           
+          </div>
+        
+    </div>
+        <h1 class="text-lg px-4 text-white text-center font-bold mt-2 text-capitalize">Just fill the form to book it now</h1>
+        <form id="servicePopupform" class="p-2 pl-2 rounded-3xl max-w-[1000] grid place-items-center pt-2">
+            <div class="mb-2">
+                <label for="selected-service" class="text-white">Service:</label>
+                <input type="text" disabled class="text-gray-600 text-white bg-gray-700 p-2 backdrop-blur-xl p-2 rounded-2xl" placeholder="Service" id="selected-service" readonly>
+            </div>
+
+            <div class="mb-2">
+                <label for="name" class="text-white">Name:</label>
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Name" id="name">
+            </div>
+
+            <div class="mb-2">
+                <label for="hotel" class="text-white">Hotel:</label>
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Hotel Name" id="hotel">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="grid place-items-center">
+                    <label for="date" class="text-white text-center w-full">Date</label>
+                    <input type="date" class="text-white bg-gray-700 p-2 w-full rounded-2xl border-none" placeholder="Date" id="date">
+                </div>
+
+                <div class="pt-4 grid place-items-center">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl transition duration-200">
+                        Submit
+                    </button>
+                </div>
+      
+            </div>
+      
+        </form>
+      
+    </div>
+    <button id="exit-button" class="absolute bg-gray-600 p-2 rounded-full  top-2 right-2 text-white hover:text-gray-400">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+</div>
 
 <div class="w-full flex pt-6  justify-center">
     <div class="w-full  rounded-3xl max-w-[1500px]">
@@ -214,7 +257,7 @@
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
                    
-                    <div  data-service="KiteBoarding+Courses+3h" class="p-2 pt-2  service active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div   class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/14.jpg"
@@ -225,11 +268,11 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div  class="absolute service  top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+3h+Group" class="absolute service  top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Group
                                 <span class="text-yellow-300"> 120$</span>
                             </div>
-                            <div   class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+3h+Private"   class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Private
                                <span class="text-yellow-300"> 150$</span>
                             </div>
@@ -240,7 +283,7 @@
                         <div></div>
                     </div>
                   
-                    <div data-service="KiteBoarding+Courses+6h" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/14.jpg"
@@ -251,11 +294,11 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+6h+Group" class="absolute service top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Group
                                 <span class="text-yellow-300"> 220$</span>
                             </div>
-                            <div class="absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+6h+Private" class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Private
                                <span class="text-yellow-300"> 280$</span>
                             </div>
@@ -265,7 +308,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Courses+9h" class="p-2 pt-2 service active:scale-95 hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/14.jpg"
@@ -276,11 +319,11 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+9h+Group" class="service absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Group
                                 <span class="text-yellow-300"> 300$</span>
                             </div>
-                            <div class="absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+9h+Private" class=" service absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Private
                                <span class="text-yellow-300"> 360$</span>
                             </div>
@@ -290,7 +333,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Courses+4h" class="p-2 pt-2 service active:scale-95 hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/14.jpg"
@@ -301,11 +344,11 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+Advanced+4h+Group" class=" service absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Group
                                 <span class="text-yellow-300"> 220$</span>
                             </div>
-                            <div class="absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Courses+Advanced+4h+Private" class=" service absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Private
                                <span class="text-yellow-300"> 250$</span>
                             </div>
@@ -358,7 +401,7 @@
                     Rental
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
-                    <div data-service="KiteBoarding+Rental+1h" class="p-2 pt-2 service active:scale-95 hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/10.jpg"
@@ -369,16 +412,16 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+1h+KiteOnly" class="service absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Kite
                                 <span class="text-gray-200"> 40$</span>
                             </div>
-                            <div class="absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div  data-service="KiteBoarding+Rental+1h+BoardOnly"   class="service absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Board
                                <span class="text-gray-200"> 25$</span>
                             </div>
-                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
-                              <div class="backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                            <div  data-service="KiteBoarding+Rental+1h+FullEquipment"  class=" service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div  class="backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
                                 Full Equipment
                                 <span class="text-yellow-300"> 60$</span>
                               </div>
@@ -392,7 +435,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Rental+1_Day" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/10.jpg"
@@ -403,16 +446,16 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+1_Day+KiteOnly" class="service absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Kite
                                 <span class="text-gray-200"> 70$</span>
                             </div>
-                            <div class="absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+1_Day+BoardOnly"  class="service absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Board
                                <span class="text-gray-200"> 35$</span>
                             </div>
-                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
-                              <div class="backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                            <div data-service="KiteBoarding+Rental+1_Day+FullEquipment" class="service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div    class=" backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
                                 Full Equipment
                                 <span class="text-yellow-300"> 100$</span>
                               </div>
@@ -423,7 +466,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Rental+7_Day" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/10.jpg"
@@ -434,15 +477,15 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+7_Day+KiteOnly" class="service absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Kite
                                 <span class="text-gray-200"> 300$</span>
                             </div>
-                            <div class="absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div  data-service="KiteBoarding+Rental+7_Day+BoardOnly" class="service absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Board
                                <span class="text-gray-200"> 130$</span>
                             </div>
-                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+7_Day+FullEquipment" class="service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
                               <div class="backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
                                 Full Equipment
                                 <span class="text-yellow-300"> 300$</span>
@@ -454,7 +497,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Rental+14_Day" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div  class="p-2 pt-2  hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/Website/10.jpg"
@@ -465,15 +508,15 @@
                                 blurDataURL={data.img}
                                 class="rounded-xl aspect-square	"
                             />
-                            <div class="absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+14_Day+KiteOnly" class=" service absolute top-2 left-2 text-sm p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Kite
                                 <span class="text-gray-200"> 450$</span>
                             </div>
-                            <div class="absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+14_Day+BoardOnly" class="service absolute top-2 text-sm right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
                                 Board
                                <span class="text-gray-200"> 220$</span>
                             </div>
-                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                            <div data-service="KiteBoarding+Rental+14_Day+FullEquipment" class=" service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
                               <div class="backdrop-blur-md w-full p-2 text-sm text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
                                 Full Equipment
                                 <span class="text-yellow-300"> 450$</span>
@@ -532,7 +575,7 @@
                      Storage
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
-                    <div data-service="KiteBoarding+Storage+1_Day" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="KiteBoarding+Storage+1_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-19.jpg"
@@ -559,7 +602,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Storage+7_Day" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="KiteBoarding+Storage+7_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-19.jpg"
@@ -586,7 +629,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Storage+2_Weeks" class="p-2 pt-2 service  active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="KiteBoarding+Storage+2_Weeks" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-19.jpg"
@@ -613,7 +656,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="KiteBoarding+Storage+3_Weeks" class="p-2 pt-2 service active:scale-95 hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="KiteBoarding+Storage+3_Weeks" class="p-2 pt-2 service  hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-19.jpg"
@@ -731,7 +774,7 @@
 
 
                     <div class="grid grid-cols-6 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 over max-w-[1400px]   gap-y-2 ">
-                    <div data-service="Windsurfing+Courses+1h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Courses+1h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -754,7 +797,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Courses+3h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Courses+3h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -776,7 +819,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Courses+6h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Courses+6h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -798,7 +841,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Courses+9h" class="p-2 pt-2 service active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Courses+9h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -821,7 +864,7 @@
                         <div></div>
                     </div>
 
-                    <div data-service="Windsurfing+Courses+unlimted_Time" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Courses+unlimted_Time" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -903,7 +946,7 @@
 
 
                     <div class="grid grid-cols-6 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
-                    <div data-service="Windsurfing+Rental+1h" class="p-2 pt-2 service active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+1h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -925,7 +968,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Rental+3h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+3h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -946,7 +989,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Rental+6h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+6h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -967,7 +1010,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <div data-service="Windsurfing+Rental+12h" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+12h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -989,7 +1032,7 @@
                         <div></div>
                     </div>
 
-                    <div data-service="Windsurfing+Rental+Week" class="p-2 pt-2 service  active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+Week" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -1012,7 +1055,7 @@
                         <div></div>
                     </div>
                     
-                    <div data-service="Windsurfing+Rental+10_Days" class="p-2 pt-2 service active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Rental+10_Days" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-6.jpg"
@@ -1079,7 +1122,7 @@
                     Sup
                 </h2>
                 <div class="grid grid-cols-1 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
-                    <div data-service="Windsurfing+Sup+1h" class="p-2 pt-2 service active:scale-95 hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="Windsurfing+Sup+1h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-10.jpg"
@@ -1321,6 +1364,54 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+    <section class="my-12  mb-20">
+        <div class="container">
+          <a href="/" class="relative block hover:shadow-lg duration-500 shadow-yellow-400  rounded-3xl ">
+            <div class="h-[400px] lg:h-[400px] object-cover   overflow-hidden rounded-3xl">
+              <div class="absolute inset-0 z-10 md:hidden"></div>
+            <iframe
+                width="100%"
+                height="100%"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26.9865756!2d33.9083053!3d26.9865756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z26.9865756!3z33.9083053!5e0!3m2!1sen!2sus"
+            ></iframe>
+            
+            </div>
+      
+            <div class="absolute z-10 right-8 left-8 sm:right-12 sm:left-12 md:left-16 lg:left-20 md:right-16 lg:right-20 top-8 sm:top-12 md:top-auto md:bottom-1/2 md:translate-y-1/2 md:text-left">
+              <h2 class="font-bold text-capitalize sm:font-normal text-gray-500 md:mb-2 w-[180px] sm:w-[350px] md:mx-0 text-2xl sm:text-4xl xl:text-5xl leading-7">
+               See us on the map ✨
+              </h2>
+              <p class="mb-4 text-xs text-gray-500 sm:mb-5 sm:text-base">
+               Piano Diving Club, Hurghada, Red Sea, Egypt
+              </p>
+              <button class="px-6 py-2 text-sm font-medium text-white bg-yellow-500 rounded-lg sm:text-base sm:py-3">
+                Get Directions
+              </button>
+            </div>
+          </a>
+        </div>
+      </section>
+      
+
+
+
+
+
+
+
+
+
+
+      
     <!-- Testimonial End -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -1403,6 +1494,73 @@
         });
         </script>
 
+
+<script>
+    // Get the exit button element
+    var exitButton = document.getElementById('exit-button');
+
+    // Add click event listener to the exit button
+    exitButton.addEventListener('click', function() {
+        // Hide the popup form
+        document.getElementById('popup-form-container').style.display = 'none';
+    });
+</script>
+
+<script>
+    // Get all services
+    var services = document.querySelectorAll('.service');
+
+    // Add click event listener to each service
+    services.forEach(function(service) {
+        service.addEventListener('click', function() {
+            // Get the selected service
+            var selectedService = this.getAttribute('data-service');
+            console.log("Selected Service: " + selectedService); // Print the selected service
+
+            // Change the URL route with the selected service
+            window.history.pushState(null, null, '?=' + selectedService);
+
+            // Set the selected service in the form
+            document.getElementById('selected-service').value = selectedService;
+
+            // Show the popup form
+            document.getElementById('popup-form-container').style.display = 'block';
+            document.getElementById('popup-form').style.display = 'block';
+        });
+    });
+
+    // Get the form element
+    var form = document.getElementById('servicePopupform');
+
+    // Add submit event listener to the form
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the form values
+        var service = document.getElementById('selected-service').value;
+        var name = document.getElementById('name').value;
+        var hotel = document.getElementById('hotel').value;
+        var date = document.getElementById('date').value;
+
+        // Construct the WhatsApp message template
+        var message = "Service: " + service + "%0A";
+        message += "Name: " + name + "%0A";
+        message += "Hotel: " + hotel + "%0A";
+        message += "Date: " + date;
+
+        // Construct the WhatsApp URL
+        var whatsappURL = "https://api.whatsapp.com/send?phone=01017040213&text=" + encodeURIComponent(message);
+
+        // Open the WhatsApp URL in a new tab
+        window.open(whatsappURL, '_blank');
+    });
+</script>
+
+
+
+
+
+
 <script>
     // Get all services
     var services = document.querySelectorAll('.service');
@@ -1414,12 +1572,14 @@
             var selectedService = this.getAttribute('data-service');
             console.log("Selected Service: " + selectedService); // Print the selected service
 //change the url route with the selected service
-            window.history.pushState(null, null, '/contact?=' + selectedService);
+            window.history.pushState(null, null, '?=' + selectedService);
             // Set the selected service in the form
-            document.getElementById('selected-service').value = selectedService;
+                      // Show the popup form
+                    document.getElementById('popup-form-container').style.display = 'block';
+                    document.getElementById('popup-form').style.display = 'block';
+                    document.getElementById('selected-service').value = selectedService;
 
-            // Show the popup form
-            document.getElementById('popup-form').style.display = 'block';
+
         });
     });
   </script>
