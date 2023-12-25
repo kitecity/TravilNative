@@ -3,20 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kite Fly School Hurghada</title>
+    <title>KiteCity School </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script defer src="./Components/Hero.js"></script>
+    <script defer src="./Components/header-component.js"></script>
+    <script defer src="./Components/Header.js"></script>
+
+
+
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="./img/logo/KS-logo-PNG-2.png" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -31,368 +34,1168 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/whatsapp.css" rel="stylesheet">
-
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+            font-weight: bold;
+            line-height: 120%;
+        }
+    </style>
 </head>
 
-<body>
-    <a href="https://api.whatsapp.com/send?phone=+201554177974&text=Client%20from%20The%20Website." class="float" target="_blank">
+<body
+class="bg-[#121212]
+text-white
+"
+>
+
+    <a href="https://api.whatsapp.com/send?phone=+201554177974&text=Client%20from%20The%20Website." class="float"
+        target="_blank">
         <i class="fab fa-whatsapp my-float"></i>
-        </a>
+    </a>
+
 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only text-white">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
 
-   <!-- Topbar Start -->
-   <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-    <div class="row gx-0">
-        <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m6!3m5!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"><small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Makadi Bay,hurghada,Egypt</small></a>
-                <a href="tel:+201554177974"><small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+201554177974</small></a>
-                <a href="mailto:Megokite@gmail.com"><small class="text-light"><i class="fa fa-envelope-open me-2"></i>Megokite@gmail.com</small></a>
-            </div>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/www.kiteflyschoohurghada?mibextid=ZbWKwL"><i class="fab fa-facebook-f fw-normal"></i></a>
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://instagram.com/kite_fly_school_egy?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram fw-normal"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Topbar End -->
+    <div id="myComponent"></div>
 
 
 
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0">
-                    <div class="logo_formate">
-                        <img src="img/logo.png" alt="Logo"  class="image_logo">
-                    </div>
-                </h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
+
+
+
+
+
+
+
+
+
+
+
+    <div style="background-image: url('./img/destination-8.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;;
+    "
+        class="Hero rounded-b-[50px]  to-transparent min-h-[700px] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] " id-"Hero">
+
+
+
+        <nav class="relative px-4 py-4 flex justify-between items-center bg-gray-900/70 backdrop-blur-xl">
+            <a class="text-3xl h-16 w-16 relative font-bold leading-none" href="/">
+                <img src="./img/logo/KS-logo-PNG-2.png" alt="" class="object-cover h-15 w-15">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link ">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <a href="package.html" class="nav-item nav-link">Courses</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    
-                </div>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-blue-600 p-3">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="hidden absolute p-2 px-4 rounded-full border-gray-400/30 border-[2px] top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <li><a class="text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-white " href="#">Home</a></li>
+
+                <li><a class="text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500  hover:bg-gray-400/20 duration-500  p-2 rounded-3xl text-white font-bold" href="#aboutID">About Us</a></li>
+
+                <li><a class="text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-white duration-500 " href="#servicesID">Services</a></li>
               
+                <li><a class="text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-white" href="#PackagesID">Packages</a></li>
+               
+                <li><a class="text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-white" href="#contactID">Contact</a></li>
+            </ul>
+            <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green-500 hover:bg-gray-100 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-gray-900 font-bold  rounded-xl transition duration-200" href="https://api.whatsapp.com/send?phone=+201554177974&text=Client%20from%20The%20Website.">
+                whatsapp
+
+            </a>
+        </nav>
+       
+
+
+
+    </div>
+
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                    <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+                        <path xmlns="http://www.w3.org/2000/svg" d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z"></path>
+                    </svg>
+                </a>
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-white/80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#aboutID">About Us</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#servicesID">Services</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#packagesID">Packages</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#contactID">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green-500 hover:bg-gray-100 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-gray-900 font-bold  rounded-xl transition duration-200" href="#">
+                        whatsapp
+        
+                    </a>                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span>Copyright © 2021</span>
+                </p>
             </div>
         </nav>
-
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Services</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+
     <!-- Navbar & Hero End -->
 
+   
 
-        <!-- Service Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                    <h1 class="mb-5">Our Services</h1>
+
+
+
+
+<!-- Popup Form -->
+<div  id="popup-form-container" style="display: none;" class="fixed md:bottom-2  bottom-[10%] md:left-2 z-10 text-white bg-gray-900/90 p-2 backdrop-blur-xl rounded-2xl h-[500px] w-full md:w-[300px] flex justify-center items-center">
+    <div id="popup-form" style="display: none;" class="place-item-center pt-12   overflow-hidden grid">
+
+    <div class="w-full  justify-center flex">
+        <div class="h-[90px] absolute top-0 w-[90px]">
+            <img src="./img/svg/aniwats.gif" alt="" 
+             class=" h-full w-full object-cover">
+           
+          </div>
+        
+    </div>
+        <h1 class="text-lg px-4 text-white text-center font-bold mt-2 text-capitalize">Just fill the form to book it now</h1>
+        <form id="servicePopupform" class="p-2 pl-2 rounded-3xl max-w-[1000] grid place-items-center pt-2">
+            <div class="mb-2">
+                <label for="selected-service" class="text-white">Service:</label>
+                <input type="text" disabled class="text-gray-600 text-white bg-gray-700 p-2 backdrop-blur-xl p-2 rounded-2xl" placeholder="Service" id="selected-service" readonly>
+            </div>
+
+            <div class="mb-2">
+                <label for="name" class="text-white">Name:</label>
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" placeholder="Name" id="name" required>
+            </div>
+
+            <div class="mb-2">
+                <label for="hotel" class="text-white">Hotel:</label>
+                <input type="text" class="text-white bg-gray-700 p-2 rounded-2xl" maxlength="50"  placeholder="Hotel Name" id="hotel">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="grid place-items-center">
+                    <label for="date" class="text-white text-center w-full">Date</label>
+                    <input type="date" class="text-white bg-gray-700 p-2 w-full rounded-2xl border-none" placeholder="Date" id="date" required>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded pt-3 highoftheservice">
-                            <div class="p-4">
-                        
-    <div class="gg">
-        <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-         viewBox="0 0 568.822 568.822"
-         xml:space="preserve">
-    <g>
-        <g>
-            <path d="M482.595,292.638c55.214-67.941,49.505-155.849,43.682-193.764c-1.606-10.442-9.371-25.13-16.764-32.666
-                C471.665,27.7,442.04,11.3,424.35,4.338c-9.83-3.863-11.504,0.201-5.154,8.645c11.618,15.443,27.119,45.546,30.103,98.188
-                c3.366,59.431-20.722,132.001-33.134,164.925c-3.729,9.887-0.507,23.465,9.018,28.037
-                C461.347,321.479,482.595,292.638,482.595,292.638z"/>
-            <path d="M349.791,1.747c-53.168,10.911-80.201,49.878-84.006,78.211c-0.517,3.911,0.612,10.136,2.295,13.694
-                c4.476,9.419,14.401,25.885,29.988,27.903c3.892,0.516,9.352-2.372,12.163-5.097c15.539-15.013,64.222-59.383,111.308-74.262
-                C421.538,42.196,407.577-10.101,349.791,1.747z"/>
-            <circle cx="137.16" cy="211.175" r="38.308"/>
-            <path d="M93.641,257.84l-50.901,91.484c-7.879,13.961-2.974,31.747,10.834,39.599l102.883,62.07
-                c3.624,2.056,8.864,6.903,11.217,10.375l7.765,11.427h-0.057c-63.285,4.781-90.193,16.429-101.611,25.341
-                c-4.781,3.739-7.373,10.901-7.373,15.74v11.81c0,4.848,2.591,12.02,7.373,15.74c11.781,9.198,45.68,24.977,140.215,27.243
-                c4.284,0.105,8.473,0.153,12.565,0.153c96.265,0,139.487-27.713,153.592-39.618c2.745-2.313,4.313-5.747,4.313-9.409
-                c0-3.682-1.568-7.105-4.313-9.409c-13.406-11.322-54.353-37.82-144.555-39.493l-6.608-0.125l-15.988-31.805
-                c-2.63-5.278-8.3-12.326-12.891-16.046l-75.735-61.563c-1.54-1.252-1.874-3.672-0.717-5.297l5.394-7.66
-                c3.547,3.634,8.73,6.072,13.588,6.072h112.656c0.736,0,2.152-0.048,3.547-0.392l37.332,47.697c1.884,2.41,4.695,3.672,7.535,3.672
-                c2.056,0,4.141-0.659,5.881-2.037c4.16-3.251,4.896-9.266,1.636-13.416l-86.062-109.968c-3.261-4.16-9.266-4.916-13.416-1.635
-                c-4.16,3.251-4.896,9.265-1.635,13.416l27.225,34.788c-3.108-0.669-6.56-1.032-10.347-1.032h-61.946
-                c-7.669,0-17.566-2.065-18.484-3.701l-19.747-44.188c-0.029-0.067-2.037-3.701-5.67-6.828l11.829,4.657
-                c0.832,1.205,1.291,2.037,1.31,2.065l15.138,33.803l3.366-4.79c2.305-3.252,2.735-7.756,1.214-11.619l43.442-20.243
-                c4.82-2.543,9.955-8.587,11.676-13.712l28.429-76.672c3.672-9.897,0.488-20.196-7.124-22.988
-                c-7.603-2.802-16.792,2.945-20.521,12.823l-26.297,69.672c-1.396,4.398-6.426,8.75-11.13,9.553l-39.551,12.278l-18.771-10.643
-                C105.775,249.473,97.886,250.324,93.641,257.84z"/>
-        </g>
-    </g>
-    </svg>
-    </div>                   
-                                <h5>Kiteboarding - Kitesurfing</h5>
-                                <p>
-                                    
-    Four course types: beginner, free ride, professional, and children's. Learn the basics, improve your skills, prepare for a career, or introduce your kids to new activities. Equipment rental available.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded pt-3 highoftheservice">
-                            <div class="p-4">
-                               <div class="gg">
-                                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                                viewBox="0 0 554.658 554.658"
-                                xml:space="preserve">
-                           <g>
-                               <g>
-                                   <path d="M533.188,465.415l-56.515,41.76c-3.385,2.505-10.461,2.715-14.009,0.363l-49.515-32.646
-                                       c-12.737-8.415-32.016-8.511-44.801-0.182l-50.71,32.904c-3.901,2.506-11.818,2.562-15.749,0.096l-52.69-33.277
-                                       c-13.148-8.281-32.426-7.487-44.838,1.854l-40.937,30.83c-3.385,2.562-10.404,2.802-13.971,0.487l-50.691-32.876
-                                       c-13.33-8.673-32.627-7.516-44.829,2.678L4.849,518.342c-5.718,4.763-6.483,13.254-1.74,18.973
-                                       c2.687,3.193,6.521,4.848,10.366,4.848c3.041,0,6.11-1.032,8.625-3.127l49.084-40.937c3.118-2.61,9.486-2.983,12.891-0.774
-                                       l50.71,32.895c13.11,8.521,32.407,7.822,44.857-1.568l40.937-30.829c3.395-2.592,10.586-2.897,14.21-0.593l52.709,33.277
-                                       c12.813,8.08,32.054,7.966,44.791-0.277l50.71-32.904c3.825-2.468,11.522-2.429,15.3,0.076l49.515,32.637
-                                       c13.015,8.616,32.331,8.109,44.877-1.166l56.514-41.77c5.977-4.428,7.229-12.871,2.821-18.848
-                                       C547.607,462.24,539.164,460.977,533.188,465.415z"/>
-                                   <path d="M255.894,394.117L397.792,345.5c9.983-3.423,19.632-14.64,20.492-25.178c11.16-135.214-106.392-256.285-218.542-306.354
-                                       c-9.648-4.293-16.467,1.167-14.984,11.628l50.366,355.793C236.606,391.84,245.901,397.549,255.894,394.117z"/>
-                                   <path d="M107.952,447.781l48.052,31.174l39.732-29.921c16.725-12.594,43.366-13.713,61.114-2.544l16.199,10.232
-                                       c14.287-4.857,30.285-10.28,47.746-16.218c52.556-17.834,90.814-55.147,107.846-74.215c5.604-6.282-1.874-26.45-8.874-22.472
-                                       c-66.593,37.771-161.54,64.461-231.107,80.487c3.204-4.456,5.173-9.859,5.384-15.74l-20.378,9.706
-                                       c-11.092-5.709-8.195-16.667-8.195-16.667l23.16-10.806c-5.068-7.066-13.177-11.81-22.539-12.077
-                                       c-15.893-0.431-29.127,12.105-29.558,28.018c-0.297,11.016,5.718,20.655,14.697,25.732c-16.409,3.376-29.931,5.91-39.273,7.574
-                                       C109.358,440.523,108.153,443.641,107.952,447.781z"/>
-                               </g>
-                           </g>
-                           </svg>
-                               </div>
-                                <h5>
-                                    Windsurfing
-                                </h5>
-                                <p>
-                                    Beginner, professional, kids courses and equipment rental available. We take care of you, our speedboat is watching you.
-    
-    
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded pt-3 highoftheservice">
-                            <div class="p-4">
-    
-    <div class="gg">
+
+                <div class="pt-4 grid place-items-center">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl transition duration-200">
+                        Submit
+                    </button>
+                </div>
       
-    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-    viewBox="0 0 521.801 521.8"
-    xml:space="preserve">
-    <g>
-    <g>
-      <circle cx="179.171" cy="86.964" r="57.289"/>
-      <path d="M521.643,310.66c-2.457-18.436-33.02-20.818-68.257-5.355l-3.223,1.416l-55.042-73.393l-1.932-20.1
-          c-0.812-8.396-6.55-15.501-14.583-18.063l-97.088-30.896l-9.601-18.293c-4.724-8.023-15.501-11.676-24.117-8.138l-85.68,39.627
-          L22.853,165.702c-11.714-0.908-21.793,7.631-22.778,19.221c-0.976,11.6,7.631,21.793,19.221,22.778l143.179,12.116l36.29,92.316
-          l-34.807,6.053c-10.672,1.855-19.479,9.41-22.912,19.689c-3.442,10.279-0.975,21.611,6.407,29.529l47.937,51.293l-19.086,8.387
-          c-35.238,15.48-55.683,39.885-45.651,54.477c10.012,14.584,46.76,14.01,82.037-1.348l249.542-108.42
-          C497.507,356.464,524.109,329.087,521.643,310.66z M227.816,366.974l60.904-10.596c8.185-1.416,15.386-6.225,19.842-13.244
-          l43.644-68.668l5.211,6.951l4.619,47.918c0.507,5.279,2.945,9.887,6.521,13.264L252.64,393.539L227.816,366.974z"/>
-    </g>
-    </g>
-    </svg>
+            </div>
+      
+        </form>
+      
     </div>
-    
-                                <h5>
-                                    Stand up Biddle
-                                </h5>
-                                <p>
-                                    Trees, area, dropship down from second world war.
-    
-    
-                                </p>
+    <button id="exit-button" class="absolute bg-gray-600 p-2 rounded-full  top-2 right-2 text-white hover:text-gray-400">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+</div>
+
+<div class="w-full flex pt-6  justify-center">
+    <div class="w-full  rounded-3xl max-w-[1500px]">
+        
+        <div id="PackagesID" class="text-center pt-12  place-items-center grid overflow-hidden">   
+            <div class="rounded-3xl select-none mb-6  w-32  h-32 bg-blue-300 p-[12px]">
+                <img src="./SVGs/one.svg" alt="" class="h-full w-full mx-auto">
+            </div>
+            <h1 class="text-3xl px-12 text-uppercase font-bold tracking-tight text-white sm:text-6xl">
+            KiteBoarding Services
+        </h1>
+        <p class="text-white/80">
+            click on the service you want to book 
+        </p>
+        </div>
+
+
+
+
+
+
+
+
+   
+        <div id="services" class="py-20  w-full flex justify-content-center relative">
+            <div class="relative   overflow-hidden ">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                     Courses
+                </h2>
+                <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
+                   
+                    <div   class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/14.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Courses+3h+Group" class="absolute service  top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Group
+                                <span class="text-yellow-300"> 120$</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item rounded pt-3 highoftheservice">
-                            <div class="p-4">
-    
-    
-    <div class="gg">
-        <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-         viewBox="0 0 554.905 554.905"
-         xml:space="preserve">
-    <g>
-        <g>
-            <path d="M350.45,502.799l77.753-87.057c3.146-3.528,5.709-10.223,5.709-14.956v-18.541c0-4.733-3.673-7.421-8.195-6.044
-                l-18.188,1.062c-4.532,1.387-8.845,6.292-9.667,10.949l-2.047,11.676c-0.812,4.657-3.939,11.36-6.98,14.984L376.47,429.56
-                l-78.785,90.844c-6.771,7.813-3.883,14.144,6.454,14.144s24.203-6.312,30.992-14.124L350.45,502.799z"/>
-            <path d="M236.236,5.491c-9.533-8.186-23.887-7.095-32.072,2.438l-89.83,104.614c-2.878,3.347-4.714,7.458-5.298,11.829
-                L86.42,295.092c-2.084,15.75,3.271,36.434,12.737,49.189L230.097,520.7c1.032,1.396,2.228,2.601,3.5,3.691l-1.1,1.157
-                c-8.674,9.094-6.723,16.811-5.489,19.708c1.243,2.897,5.489,9.648,18.045,9.648h10.527c12.47,0,27.904-6.732,36.844-15.826
-                c-0.201,0-0.401,0.038-0.593,0.038c-10.337,0-13.224-6.32-6.445-14.133l78.776-90.854l12.374-14.679
-                c0.095-0.124,0.2-0.296,0.306-0.439l1.941-9.4c0.984-4.829-0.02-9.39-2.841-12.861c-3.395-4.16-9.122-5.986-14.937-4.743
-                l-19.632,4.227c-8.271,1.76-15.587,9.037-17.403,17.271l-3.424,15.396c-0.641,2.916-3.327,7.889-5.422,10.098l-8.788,9.209
-                l-2.572,2.696L191.79,301.843V191.032h117.102l-16.906,28.066c-2.726,4.523-1.272,10.404,3.251,13.129
-                c1.549,0.937,3.241,1.377,4.925,1.377c3.241,0,6.406-1.645,8.204-4.628l5.776-9.591l57.575,9.113l83.729,37.571
-                c1.271,0.574,2.601,0.841,3.911,0.841c3.653,0,7.144-2.104,8.73-5.651c2.171-4.819,0.01-10.471-4.81-12.632l-82.229-36.902
-                l-31.604-50.949l4.141-6.875c2.725-4.523,1.271-10.404-3.252-13.129c-4.522-2.745-10.403-1.272-13.119,3.251l-11.083,18.398
-                c-3.29-4.686-8.712-7.774-14.88-7.774H150.919l2.333-17.604l7.535-8.778c8.424,8.348,20.014,13.521,32.809,13.521
-                c25.761,0,46.646-20.885,46.646-46.646c0-15.348-7.507-28.84-18.943-37.341l17.385-20.244
-                C246.85,28.03,245.76,13.667,236.236,5.491z M355.327,206.524l-30.533-4.829l13.569-22.52L355.327,206.524z M199.354,387.647
-                l72.56,96.591l-3.538,3.701l-3.347,3.499l-74.377-100.195L199.354,387.647z"/>
-        </g>
-    </g>
-    </svg>
-    </div>
-    
-                                <h5>
-                                    Weak boarding water ski
-    
-                                </h5>
-                                <p>
-                                    
-    Beginner, free ride, professional, and children's courses, plus equipment rental. Everything you need to learn and enjoy your favorite activity.
-                                </p>
+                            <div data-service="KiteBoarding+Courses+3h+Private"   class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Private
+                               <span class="text-yellow-300"> 150$</span>
                             </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (3h)
+                            </h3>
                         </div>
+                        <div></div>
                     </div>
                   
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/14.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Courses+6h+Group" class="absolute service top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Group
+                                <span class="text-yellow-300"> 220$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Courses+6h+Private" class="absolute service top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Private
+                               <span class="text-yellow-300"> 280$</span>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (6h)
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/14.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Courses+9h+Group" class="service absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Group
+                                <span class="text-yellow-300"> 300$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Courses+9h+Private" class=" service absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Private
+                               <span class="text-yellow-300"> 360$</span>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course(9h)
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/14.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Courses+Advanced+4h+Group" class=" service absolute top-2 left-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Group
+                                <span class="text-yellow-300"> 220$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Courses+Advanced+4h+Private" class=" service absolute top-2 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Private
+                               <span class="text-yellow-300"> 250$</span>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white  "> Advanced  Course (4h) </span>
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-        <!-- Service End -->
-
-
-   <!-- Testimonial Start -->
-   <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="text-center">
-            <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-            <h1 class="mb-5">Our Clients Say!!!</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel position-relative">
-            <div class="testimonial-item bg-white text-center border p-4">
-                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-11.png" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Daniel Teasdale</h5>
-                <p class="mb-0">Mego was a great instructor.  Very patient, knowledgeable and helped me progress.  I was able to stand on the board after just a few hours after trying to learn for 4 months.  He was able to identify my mistakes and find practical ways to practice to improve.  Highly recommend this school.</p>
-                <a target="_blank" href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu" class="btn btn-primary rounded-pill  py-2 px-4">
-                    see the review </a>
-            </div>
-            <div class="testimonial-item bg-white text-center border p-4">
-                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">alberto colombo</h5>
-                <p class="mt-2 mb-0">Scuola di kite molto professionale! Migo l istruttore insieme al suo team sono persone disponibili, qualificate e simpatiche! Lo spot è veramente bello! Se siete in vacanza in zona e volete fare kite dovete passare di qui!
-                </p>
-                <a target="_blank" href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu" class="btn btn-primary rounded-pill  py-2 px-4">
-                    see the review </a>
-            </div>
-            <div class="testimonial-item bg-white text-center border p-4">
-                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Юлия Приходько</h5>
-                <p class="mt-2 mb-0">Взяла курс из трёх занятий по виндсёрфингу в этой школе. Было классно! На третье занятие я уже сама шла под парусом в заливе, это очень круто! Спасибо тренерам Миго и Ясеру, они здорово все объясняют и показывают, ребята, я буду по вам скучать и ещё вернусь! Начало положено!</p>
-                <a target="_blank" href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu" class="btn btn-primary rounded-pill  py-2 px-4">
-                    see the review </a>
-            </div>
-            <div class="testimonial-item bg-white text-center border p-4">
-                <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Andre Pinheiro</h5>
-                <p class="mt-2 mb-0">Best possible kiting experience in Hurghada. Mego is friendly, patient and teaches very well. I've tried different teachers in my life and he is by far the best one. More than a teacher, I made a good friend. If you want to learn, refresh or just have fun with kite, he is your best choice in Hurghada.</p>
-                <a target="_blank" href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu" class="btn btn-primary rounded-pill  py-2 px-4">
-                    see the review </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-     
- <!-- Footer Start -->
- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5 justify-content-center">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">
-                    <div class="logo_formate">
-                        <img src="img/logo.png" alt="Logo"  class="image_logo">
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+        <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
+            <div class="relative  overflow-hidden">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300 font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                    
+                    Rental
+                </h2>
+                <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
+                    <div  class="p-2 pt-2   hover:bg-blue-300/50   cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Rental+1h+KiteOnly" class="service absolute top-2 left-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Kite
+                                <span class="text-gray-200"> 40$</span>
+                            </div>
+                            <div  data-service="KiteBoarding+Rental+1h+BoardOnly"   class="service absolute top-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Board
+                               <span class="text-gray-200"> 25$</span>
+                            </div>
+                            <div  data-service="KiteBoarding+Rental+1h+FullEquipment"  class=" service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div  class="backdrop-blur-md w-full p-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                                Full Equipment
+                                <span class="text-yellow-300"> 60$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                (1 Hour)
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
                     </div>
-                </h4>
-                <a class="btn btn-link" href="/about.html">About Us</a>
-                <a class="btn btn-link" href="/contact.html">Contact Us</a>
-                <a class="btn btn-link" href="/service.html">Services</a>
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Rental+1_Day+KiteOnly" class="service absolute top-2 left-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Kite
+                                <span class="text-gray-200"> 70$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Rental+1_Day+BoardOnly"  class="service absolute top-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Board
+                               <span class="text-gray-200"> 35$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Rental+1_Day+FullEquipment" class="service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div    class=" backdrop-blur-md w-full p-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                                Full Equipment
+                                <span class="text-yellow-300"> 100$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(1 Day)</span>
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div  class="p-2 pt-2    hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Rental+7_Day+KiteOnly" class="service absolute top-2 left-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Kite
+                                <span class="text-gray-200"> 300$</span>
+                            </div>
+                            <div  data-service="KiteBoarding+Rental+7_Day+BoardOnly" class="service absolute top-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Board
+                               <span class="text-gray-200"> 130$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Rental+7_Day+FullEquipment" class="service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                                Full Equipment
+                                <span class="text-yellow-300"> 300$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(7 Days)</span>
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div  class="p-2 pt-2  hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/Website/10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div data-service="KiteBoarding+Rental+14_Day+KiteOnly" class=" service absolute top-2 left-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Kite
+                                <span class="text-gray-200"> 450$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Rental+14_Day+BoardOnly" class="service absolute top-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 right-2 p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                                Board
+                               <span class="text-gray-200"> 220$</span>
+                            </div>
+                            <div data-service="KiteBoarding+Rental+14_Day+FullEquipment" class=" service absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                                Full Equipment
+                                <span class="text-yellow-300"> 450$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(14 Days)</span>
+    
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-3">Contact</h4>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+        <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
+            <div class="relative overflow-hidden">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300 font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                     Storage
+                </h2>
+                <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
+                    <div data-service="KiteBoarding+Storage+1_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4  duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-19.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                               
+                                <span class="text-yellow-300"> 20$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                1 Day
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="KiteBoarding+Storage+7_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-19.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                               
+                                <span class="text-yellow-300"> 70$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                7 Day
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="KiteBoarding+Storage+2_Weeks" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-19.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                               
+                                <span class="text-yellow-300"> 100$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                2 Weeks
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="KiteBoarding+Storage+3_Weeks" class="p-2 pt-2 service  hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-19.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+                               
+                                <span class="text-yellow-300"> 140$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                3 Weeks
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="w-full  flex pt-6  overflow-hidden justify-center">
+  
+    <div class="w-full  rounded-3xl max-w-[1500px]">
+        
+        <div class="text-center pt-12  place-items-center grid overflow-hidden">   
+            <div class="rounded-3xl relative mb-6 select-none  w-32  h-32 bg-yellow-300 p-[12px]">
+                <img src="./SVGs/two.svg" alt="" class="h-full w-full mx-auto">
+            </div>
+            <h1 class="text-3xl   px-12 text-uppercase font-bold tracking-tight text-white sm:text-6xl">
+                Windsurfing
+                 Services
+           </h1>
+         <p class="">
+            click on the service you want to book 
+
+         </p>
+         
+        </div>
+
+
+
+
+
+
+
+
+   
+        <div id="services" class="py-20  w-full flex justify-content-center relative">
+            <div class="relative   overflow-hidden ">
+                <h2 class="mb-4 text-2xl px-4 text-yellow-500  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                     Courses
+                     <p class="text-left text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500  text-white/80 mb-4">
+                        from 5 years old till 10 years <span class="text-white">free try 15 min</span>
+    </p>
+                    </h2>
+
+
+                    <div class="grid grid-cols-6 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 over max-w-[1400px]   gap-y-2 ">
+                    <div data-service="Windsurfing+Courses+1h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                    <span class="text-yellow-300 text-md"> 30$</span>
+                                  
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (1h)
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Courses+3h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 70$</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                              Basic  <span class=" "> 1 </span> Course (3h)
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Courses+6h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 120$</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                              Basic  <span class=" "> 1 </span> Course (6h)
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Courses+9h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 160$</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                              Basic  <span class=" "> 1 </span> Course (9h)
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <div data-service="Windsurfing+Courses+unlimted_Time" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 350$</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                             unlimted  <span class=" "> Time </span> 
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
+            <div class="relative   overflow-hidden ">
+                <h2 class="mb-4 text-2xl px-4 text-yellow-500  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                     Rental
+                    
+                    </h2>
+
+
+                    <div class="grid grid-cols-6 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
+                    <div data-service="Windsurfing+Rental+1h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                    <span class="text-yellow-300 text-md"> 20 $</span>
+                                  
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+1   h                         </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Rental+3h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 50 $</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+3  h                              </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Rental+6h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 80 $</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+6   h                             </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div data-service="Windsurfing+Rental+12h" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 150 $</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+12h                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+
+                    <div data-service="Windsurfing+Rental+Week" class="p-2 pt-2 service  hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 300 $</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                             Week
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                    
+                    <div data-service="Windsurfing+Rental+10_Days" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-6.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                            <div class="absolute bottom-2 right-2 left-2 text-center p-2 bg-gray-900/40 backdrop-blur-md text-white select-none active:scale-95 cursor-pointer rounded-full">
+                               
+                                <span class="text-yellow-300 text-md"> 360 $</span>
+                              
+                        </div>
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                             10 Days
+                                </h3>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+        <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
+            <div class="relative  overflow-hidden">
+                <h2 class="mb-4 text-2xl px-4  text-yellow-500  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                    
+                    Sup
+                </h2>
+                <div class="grid grid-cols-1 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
+                    <div data-service="Windsurfing+Sup+1h" class="p-2 pt-2 service hover:bg-yellow-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                        <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
+                            <img
+                                src="./img/destination-10.jpg"
+                                alt="Category 1"
+                                layout="fill"
+                                objectFit="cover"
+                                placeholder="blur"
+                                blurDataURL={data.img}
+                                class="rounded-xl aspect-square	"
+                            />
+                          
+                            <div class="absolute bottom-2 left-0 right-0 text-white flex justify-content-center select-none active:scale-95 cursor-pointer rounded-full">
+                              <div class="backdrop-blur-md w-full p-2 text-sm  hover:bg-gray-400/20 px-[7px] rounded-3xl p-2 duration-500 text-center rounded-full max-w-[70%]  bg-gray-900/40  h-full">
+
+                                <span class="text-yellow-300"> 20$</span>
+                              </div>
+                            </div>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
+                                (1 Hour)
+                                </span>
+                           
+                            </h3>
+                        </div>
+                        <div></div>
+                    </div>
+
+                </div>
                 
-                <p class="mb-2"><a href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m6!3m5!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"><i class="fa fa-map-marker-alt me-3"></i>Makadi Bay, hurghada , Egypt</a></p>
-                <a href="tel:+201554177974"><p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+201554177974</p></a>
-                <a href="mailto:Megokite@gmail.com"><i class="fa fa-envelope-open me-2"></i>Megokite@gmail.com</a>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/www.kiteflyschoohurghada?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://instagram.com/kite_fly_school_egy?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram fw-normal"></i></a>
-                </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <a href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.986566,33.9078039,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMP-Yr9-5fInMtZ2jGLYFKre5x4o70C41Aic2Hs!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMP-Yr9-5fInMtZ2jGLYFKre5x4o70C41Aic2Hs%3Dw224-h298-k-no!7i3468!8i4624!4m17!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m8!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"><h4 class="text-white mb-3">Gallery</h4></a>
-                <div class="row g-2 pt-2">
-                    <div class="col-4 h-10 w-10 overflow-hidden position-relative">
-                        <a href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.986566,33.9078039,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMP-Yr9-5fInMtZ2jGLYFKre5x4o70C41Aic2Hs!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMP-Yr9-5fInMtZ2jGLYFKre5x4o70C41Aic2Hs%3Dw224-h298-k-no!7i3468!8i4624!4m17!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m8!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"> <img class="img-fluid bg-light p-1" src="img/destination-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 h-10 w-10 overflow-hidden position-relative">
-                        <img class="img-fluid bg-light p-1" src="img/destination-4.jpg" alt="">
-                    </div>
-                    <div class="col-4 h-10 w-10 overflow-hidden">
-                        <img class="img-fluid bg-light p-1" src="img/destination-11.jpg" alt="">
-                    </div>
-                    <div class="col-4 h-10 w-10 overflow-hidden">
-                        <img class="img-fluid bg-light p-1" src="img/destination-15.jpg" alt="">
-                    </div>
-                    <div class="col-4 h-10 w-10 overflow-hidden">
-                        <img class="img-fluid bg-light p-1" src="img/destination-16.jpg" alt="">
-                    </div>
-                    <div class="col-4 h-10 w-10 overflow-hidden">
-                        <img class="img-fluid bg-light p-1" src="img/destination-9.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-           
         </div>
+    
+    
+    
+    
+    
+    
+    
+    
     </div>
-    <div class="container">
-        <div class="copyright text-capitalize lol2">
-           created with 💕 <a href="https://www.linkedin.com/in/hatemali2002/" target="_blank"> By Hatem Ali </a> 
-        </div>
-    </div>
+    
 </div>
-<!-- Footer End -->
 
 
-<!-- Back to Top
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+
+
+
+    
+    <!-- Testimonial End -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 KiteCity, LLC</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="img/logo/KS-logo-PNG-2.png" alt="" width="70" height="32">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -407,6 +1210,218 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+   
 
+
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+        </script>
+
+
+<script>
+    // Get the exit button element
+    var exitButton = document.getElementById('exit-button');
+
+    // Add click event listener to the exit button
+    exitButton.addEventListener('click', function() {
+        // Hide the popup form
+        document.getElementById('popup-form-container').style.display = 'none';
+    });
+</script>
+
+<script>
+  // Get all services
+  var services = document.querySelectorAll('.service');
+
+  // Add click event listener to each service
+  services.forEach(function(service) {
+      service.addEventListener('click', function() {
+          // Get the selected service
+          var selectedService = this.getAttribute('data-service');
+          console.log("Selected Service: " + selectedService); // Print the selected service
+
+          // Change the URL route with the selected service
+          window.history.pushState(null, null, '?=' + selectedService);
+
+          // Set the selected service in the form
+          document.getElementById('selected-service').value = selectedService;
+
+          // Show the popup form
+          document.getElementById('popup-form-container').style.display = 'block';
+          document.getElementById('popup-form').style.display = 'block';
+      });
+  });
+
+  // Get the form element
+  var form = document.getElementById('servicePopupform');
+
+  // Add submit event listener to the form
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the form values
+      var name = document.getElementById('name').value;
+      var hotel = document.getElementById('hotel').value;
+      var date = document.getElementById('date').value;
+
+      // Validate the form fields
+      if (name.trim() === '') {
+          alert('Name cannot be empty');
+          return;
+      }
+
+      // You can add more validation checks for other fields as needed
+
+      // Construct the WhatsApp message template
+      var service = document.getElementById('selected-service').value;
+      var serviceParts = service.split('+');
+      var serviceCategory = serviceParts[0];
+      var serviceDuration = serviceParts[1];
+      var serviceType = serviceParts[2];
+
+      var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
+
+      var message = `🚨 New Client 🚨
+      Service: ${serviceWithEmojis}
+      **Name**: ${name} 👦
+      **Hotel**: ${hotel} 🏨
+      **Date**: ${date} 📅
+
+      **This message is from the website. (Service Page)**`;
+
+      // Construct the WhatsApp URL
+      var whatsappURL = `https://api.whatsapp.com/send?phone=+201017040213&text=${encodeURIComponent(message)}`;
+      
+      // Open the WhatsApp URL in a new tab
+      window.open(whatsappURL, '_blank');
+  });
+</script>
+
+
+
+
+
+
+<script>
+    // Get all services
+    var services = document.querySelectorAll('.service');
+
+    // Add click event listener to each service
+    services.forEach(function(service) {
+        service.addEventListener('click', function() {
+            // Get the selected service
+            var selectedService = this.getAttribute('data-service');
+            console.log("Selected Service: " + selectedService); // Print the selected service
+//change the url route with the selected service
+            window.history.pushState(null, null, '?=' + selectedService);
+            // Set the selected service in the form
+                      // Show the popup form
+                    document.getElementById('popup-form-container').style.display = 'block';
+                    document.getElementById('popup-form').style.display = 'block';
+                    document.getElementById('selected-service').value = selectedService;
+
+
+        });
+    });
+  </script>
+    <script>
+        
+        var whatsappUrl = 'https://api.whatsapp.com/send?phone=+201554177974&text=';
+        function sendWhatsappMessage() {
+
+            // Get the form values
+            var name = document.getElementById('whatsapp-form').name.value;
+            var email = document.getElementById('whatsapp-form').email.value;
+            var datetime = document.getElementById('whatsapp-form').datetime.value;
+            var selectOption = document.getElementById('whatsapp-form').select_option.value;
+            var message = document.getElementById('whatsapp-form').message.value;
+
+            // Construct the WhatsApp message URL
+            whatsappUrl += encodeURIComponent('Name: ' + name + ' 👦\n The Package: ' + selectOption + ' 🤔\nEmail: ' + email + ' 📧\nDate and time: ' + datetime + ' 📅\nMessage: ' + message);
+
+            // Open the WhatsApp message URL
+            window.open(whatsappUrl);
+        }
+
+
+        function bookthecode() {
+            var selectOption = document.getElementById("booknow").select_option_Packages.value
+            whatsappUrl += encodeURIComponent('i am a client from the website and i want the packages:  ' + "**" + selectOption + "**");
+
+            // Open the WhatsApp message URL
+            window.open(whatsappUrl);
+        }
+
+        function bookthecode2() {
+            var selectOption = document.getElementById("bookthecode2").select_option_Packages.value
+            whatsappUrl += encodeURIComponent('i am a client from the website and i want the packages:  ' + "**" + selectOption + "**");
+
+            // Open the WhatsApp message URL
+            window.open(whatsappUrl);
+        }
+
+
+
+
+    </script>
+
+<script type="module">
+    // Import the createComponent function
+    import { createComponent } from './Components/ContactNav.js';
+
+    // Call the function to create the component when the page is loaded
+    window.addEventListener('DOMContentLoaded', createComponent);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
 </html>
