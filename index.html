@@ -1938,17 +1938,25 @@ text-white
         var hotel = document.getElementById('hotel').value;
         var date = document.getElementById('date').value;
 
-        // Construct the WhatsApp message template
-        var message = "Service: " + service + "%0A";
-        message += "Name: " + name + "%0A";
-        message += "Hotel: " + hotel + "%0A";
-        message += "Date: " + date;
+          // Construct the WhatsApp message template
+          var serviceParts = service.split('+');
+          var serviceCategory = serviceParts[0];
+          var serviceDuration = serviceParts[1];
+          var serviceType = serviceParts[2];
 
-        // Construct the WhatsApp URL
-        var whatsappURL = "https://api.whatsapp.com/send?phone=+201017040213&text=" + encodeURIComponent(message);
+          var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
 
-        // Open the WhatsApp URL in a new tab
-        window.open(whatsappURL, '_blank');
+          var message = `Service: ${serviceWithEmojis}
+          **Name**: ${name} 👦
+          **Hotel**: ${hotel} 🏨
+          **Date**: ${date} 📅
+
+          **This message is from the website.**`;
+
+          // Construct the WhatsApp URL
+          var whatsappURL = `https://api.whatsapp.com/send?phone=+201017040213&text=${encodeURIComponent(message)}`;
+          // Open the WhatsApp URL in a new tab
+          window.open(whatsappURL, '_blank');
     });
 </script>
 
