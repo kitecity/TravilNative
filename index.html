@@ -1944,14 +1944,15 @@ text-white
           var serviceDuration = serviceParts[1];
           var serviceType = serviceParts[2];
 
-          var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
+            var serviceWithEmojis = `${serviceCategory} 🏄‍♂️ ${serviceDuration} ⏰ ${serviceType}`;
 
-          var message = `Service: ${serviceWithEmojis}
-          **Name**: ${name} 👦
-          **Hotel**: ${hotel} 🏨
-          **Date**: ${date} 📅
+            var message = `🚨 New Client 🚨
+            Service: ${serviceWithEmojis}
+            **Name**: ${name} 👦
+            **Hotel**: ${hotel} 🏨
+            **Date**: ${date} 📅
 
-          **This message is from the website.**`;
+            **This message is from the website.**`;
 
           // Construct the WhatsApp URL
           var whatsappURL = `https://api.whatsapp.com/send?phone=+201017040213&text=${encodeURIComponent(message)}`;
