@@ -43,7 +43,11 @@
     </style>
 </head>
 
-<body>
+<body
+class="bg-[#121212]
+text-white
+"
+>
 
     <a href="https://api.whatsapp.com/send?phone=+201554177974&text=Client%20from%20The%20Website." class="float"
         target="_blank">
@@ -55,7 +59,7 @@
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only text-white">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -79,13 +83,13 @@
     <div style="background-image: url('./img/destination-8.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
 
     "
-        class="Hero min-h-[700px] " id-"Hero">
+        class="Hero rounded-b-[50px] min-h-[700px] " id-"Hero">
 
 
 
-        <nav class="relative px-4 py-4 flex justify-between items-center bg-gray-900/20 backdrop-blur-xl">
-            <a class="text-3xl font-bold leading-none" href="#">
-               <img src="./img/logo/KS-logo-PNG-2.png" alt="" class="h-20 w-20">
+        <nav class="relative px-4 py-4 flex justify-between items-center bg-gray-900/70 backdrop-blur-xl">
+            <a class="text-3xl h-16 w-16 relative font-bold leading-none" href="/">
+                <img src="./img/logo/KS-logo-PNG-2.png" alt="" class="object-cover h-15 w-15">
             </a>
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -96,15 +100,15 @@
                 </button>
             </div>
             <ul class="hidden absolute p-2 px-4 rounded-full border-[1px] top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-                <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+                <li><a class="text-sm text-gray-400 hover:text-white/80" href="#">Home</a></li>
 
                 <li><a class="text-sm text-blue-600 font-bold" href="#aboutID">About Us</a></li>
 
-                <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#servicesID">Services</a></li>
+                <li><a class="text-sm text-gray-400 hover:text-white/80" href="#servicesID">Services</a></li>
               
-                <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#PackagesID">Packages</a></li>
+                <li><a class="text-sm text-gray-400 hover:text-white/80" href="#PackagesID">Packages</a></li>
                
-                <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#contactID">Contact</a></li>
+                <li><a class="text-sm text-gray-400 hover:text-white/80" href="#contactID">Contact</a></li>
             </ul>
             <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green-500 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="https://api.whatsapp.com/send?phone=+201554177974&text=Client%20from%20The%20Website.">
                 whatsapp
@@ -127,7 +131,7 @@
                     </svg>
                 </a>
                 <button class="navbar-close">
-                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-white/80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
@@ -232,10 +236,10 @@
             <div class="rounded-3xl select-none mb-6  w-32  h-32 bg-blue-300 p-[12px]">
                 <img src="./SVGs/one.svg" alt="" class="h-full w-full mx-auto">
             </div>
-            <h1 class="text-3xl px-12 text-uppercase font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 class="text-3xl px-12 text-uppercase font-bold tracking-tight text-white sm:text-6xl">
             KiteBoarding Services
         </h1>
-        <p>
+        <p class="text-white/80">
             click on the service you want to book 
         </p>
         </div>
@@ -250,7 +254,7 @@
    
         <div id="services" class="py-20  w-full flex justify-content-center relative">
             <div class="relative   overflow-hidden ">
-                <h2 class="mb-4 text-2xl px-4   font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
                      Courses
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
@@ -274,8 +278,8 @@
                                 Private
                                <span class="text-yellow-300"> 150$</span>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                Basic <span class="text-black">1</span> Course (3h)
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (3h)
                             </h3>
                         </div>
                         <div></div>
@@ -300,8 +304,8 @@
                                 Private
                                <span class="text-yellow-300"> 280$</span>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                Basic <span class="text-black">1</span> Course (6h)
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (6h)
                             </h3>
                         </div>
                         <div></div>
@@ -325,8 +329,8 @@
                                 Private
                                <span class="text-yellow-300"> 360$</span>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                Basic <span class="text-black">1</span> Course(9h)
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course(9h)
                             </h3>
                         </div>
                         <div></div>
@@ -350,8 +354,8 @@
                                 Private
                                <span class="text-yellow-300"> 250$</span>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                <span class="text-yellow-400 "> Advanced  Course (4h) </span>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white  "> Advanced  Course (4h) </span>
                                 </h3>
                         </div>
                         <div></div>
@@ -394,7 +398,7 @@
        
         <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
             <div class="relative  overflow-hidden">
-                <h2 class="mb-4 text-2xl px-4  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300 font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
                     
                     Rental
                 </h2>
@@ -424,8 +428,8 @@
                                 <span class="text-yellow-300"> 60$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 (1 Hour)
                                 </span>
                            
@@ -458,8 +462,8 @@
                                 <span class="text-yellow-300"> 100$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                <span class="text-black">(1 Day)</span>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(1 Day)</span>
                             </h3>
                         </div>
                         <div></div>
@@ -489,8 +493,8 @@
                                 <span class="text-yellow-300"> 300$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                <span class="text-black">(7 Days)</span>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(7 Days)</span>
                             </h3>
                         </div>
                         <div></div>
@@ -520,8 +524,8 @@
                                 <span class="text-yellow-300"> 450$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                <span class="text-black">(14 Days)</span>
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                <span class="text-white">(14 Days)</span>
     
                             </h3>
                         </div>
@@ -569,7 +573,7 @@
        
         <div id="services" class="py-20 pt-0  w-full flex justify-content-center relative">
             <div class="relative overflow-hidden">
-                <h2 class="mb-4 text-2xl px-4  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
+                <h2 class="mb-4 text-2xl px-4  text-blue-300 font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
                      Storage
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
@@ -591,8 +595,8 @@
                                 <span class="text-yellow-300"> 20$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 1 Day
                                 </span>
                            
@@ -618,8 +622,8 @@
                                 <span class="text-yellow-300"> 70$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 7 Day
                                 </span>
                            
@@ -645,8 +649,8 @@
                                 <span class="text-yellow-300"> 100$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 2 Weeks
                                 </span>
                            
@@ -672,8 +676,8 @@
                                 <span class="text-yellow-300"> 140$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 3 Weeks
                                 </span>
                            
@@ -743,7 +747,7 @@
             <div class="rounded-3xl relative mb-6 select-none  w-32  h-32 bg-yellow-300 p-[12px]">
                 <img src="./SVGs/two.svg" alt="" class="h-full w-full mx-auto">
             </div>
-            <h1 class="text-3xl  px-12 text-uppercase font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 class="text-3xl  px-12 text-uppercase font-bold tracking-tight text-white sm:text-6xl">
                 Windsurfing
                  Services
            </h1>
@@ -765,8 +769,8 @@
             <div class="relative   overflow-hidden ">
                 <h2 class="mb-4 text-2xl px-4 text-yellow-500  font-bold md:mb-4 lg:mb-8 md:text-3xl lg:text-4xl">
                      Courses
-                     <p class="text-left text-sm  text-gray-500 mb-4">
-                        from 5 years old till 10 years <span class="text-black">free try 15 min</span>
+                     <p class="text-left text-sm  text-white/80 mb-4">
+                        from 5 years old till 10 years <span class="text-white">free try 15 min</span>
     </p>
                     </h2>
 
@@ -789,8 +793,8 @@
                                     <span class="text-yellow-300 text-md"> 30$</span>
                                   
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                                Basic <span class="text-black">1</span> Course (1h)
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                                Basic <span class="text-white">1</span> Course (1h)
                             </h3>
                         </div>
                         <div></div>
@@ -811,7 +815,7 @@
                                 <span class="text-yellow-300 text-md"> 70$</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                               Basic  <span class=" "> 1 </span> Course (3h)
                                 </h3>
                         </div>
@@ -833,7 +837,7 @@
                                 <span class="text-yellow-300 text-md"> 120$</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                               Basic  <span class=" "> 1 </span> Course (6h)
                                 </h3>
                         </div>
@@ -855,7 +859,7 @@
                                 <span class="text-yellow-300 text-md"> 160$</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                               Basic  <span class=" "> 1 </span> Course (9h)
                                 </h3>
                         </div>
@@ -878,7 +882,7 @@
                                 <span class="text-yellow-300 text-md"> 350$</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                              unlimted  <span class=" "> Time </span> 
                                 </h3>
                         </div>
@@ -961,7 +965,7 @@
                                     <span class="text-yellow-300 text-md"> 20 $</span>
                                   
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
 1   h                         </h3>
                         </div>
                         <div></div>
@@ -982,7 +986,7 @@
                                 <span class="text-yellow-300 text-md"> 50 $</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
 3  h                              </h3>
                         </div>
                         <div></div>
@@ -1003,7 +1007,7 @@
                                 <span class="text-yellow-300 text-md"> 80 $</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
 6   h                             </h3>
                         </div>
                         <div></div>
@@ -1024,7 +1028,7 @@
                                 <span class="text-yellow-300 text-md"> 150 $</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
 12h                                </h3>
                         </div>
                         <div></div>
@@ -1046,7 +1050,7 @@
                                 <span class="text-yellow-300 text-md"> 300 $</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                              Week
                                 </h3>
                         </div>
@@ -1069,7 +1073,7 @@
                                 <span class="text-yellow-300 text-md"> 360 $</span>
                               
                         </div>
-                         <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
+                         <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
                              10 Days
                                 </h3>
                         </div>
@@ -1138,8 +1142,8 @@
                                 <span class="text-yellow-300"> 20$</span>
                               </div>
                             </div>
-                            <h3 class="font-bold z-10 text-center leading-5 text-gray-500  text-md md:text-xl">
-                            <span class="text-black">
+                            <h3 class="font-bold z-10 text-center leading-5 py-2 text-white/80  text-md md:text-xl">
+                            <span class="text-white">
                                 (1 Hour)
                                 </span>
                            
@@ -1206,7 +1210,7 @@
                    
            </span>
    
-           <span class="text-black"> 
+           <span class="text-white"> 
                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                  </svg>
@@ -1385,10 +1389,10 @@
             </div>
       
             <div class="absolute z-10 right-8 left-8 sm:right-12 sm:left-12 md:left-16 lg:left-20 md:right-16 lg:right-20 top-8 sm:top-12 md:top-auto md:bottom-1/2 md:translate-y-1/2 md:text-left">
-              <h2 class="font-bold text-capitalize sm:font-normal text-gray-500 md:mb-2 w-[180px] sm:w-[350px] md:mx-0 text-2xl sm:text-4xl xl:text-5xl leading-7">
+              <h2 class="font-bold text-capitalize sm:font-normal text-white/80 md:mb-2 w-[180px] sm:w-[350px] md:mx-0 text-2xl sm:text-4xl xl:text-5xl leading-7">
                See us on the map ✨
               </h2>
-              <p class="mb-4 text-xs text-gray-500 sm:mb-5 sm:text-base">
+              <p class="mb-4 text-xs text-white/80 sm:mb-5 sm:text-base">
                Piano Diving Club, Hurghada, Red Sea, Egypt
               </p>
               <button class="px-6 py-2 text-sm font-medium text-white bg-yellow-500 rounded-lg sm:text-base sm:py-3">
