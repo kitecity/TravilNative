@@ -577,7 +577,7 @@ text-white
                      Storage
                 </h2>
                 <div class="grid grid-cols-4 overflow-x-scroll sm:overflow-hidden  scroll-padding gap-[250px] sm:gap-4 sm:place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px]   gap-y-2 ">
-                    <div data-service="KiteBoarding+Storage+1_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4 duration-500 lg:p-3 gap-y-4  rounded-xl">
+                    <div data-service="KiteBoarding+Storage+1_Day" class="p-2 pt-2 service   hover:bg-blue-300/50  cursor-pointer py-4  duration-500 lg:p-3 gap-y-4  rounded-xl">
                         <div class="relative aspect-square min-h-60 mb-2 md:h-60 lg:h-72">
                             <img
                                 src="./img/destination-19.jpg"
@@ -1225,7 +1225,7 @@ text-white
    
         </p>
        
-        <h1 class="text-3xl  px-12 text-capitalize font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 class="text-3xl  px-12 text-capitalize font-bold tracking-tight text-gray-100 sm:text-6xl">
            Don't miss the fun
        </h1>
     <p>
@@ -1288,7 +1288,11 @@ text-white
 
 
 
-
+<div class="w-full h-12 grid pt-4 place-items-center">
+    <button class="bg-yellow-400  hover:bg-yellow-700 duration-500 text-black font-bold py-2 px-4 rounded-3xl">
+        Go to Full Gallery
+    </button>
+</div>
 
 
 
@@ -1297,7 +1301,7 @@ text-white
             class="flex flex-col gap-6 text-[#121212] text-center box-border px-0 lg:px-16 max-lg:px-2 max-md:px-0 max-w-[890px]">
             <div style="font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; font-weight: bold; line-height: 120%;"
                 class="text-4xl md:text-7xl font-bold relative leading-120%">
-                <h1 class="fsizeMain">What our customers are saying about us</h1>
+                <h1 class="fsizeMain text-white">What our customers are saying about us</h1>
             </div>
         </div>
     </div>
@@ -1305,103 +1309,493 @@ text-white
 
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-11.png"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Daniel Teasdale</h5>
-                    <p class="mb-0">Mego was a great instructor. Very patient, knowledgeable and helped me progress. I
-                        was able to stand on the board after just a few hours after trying to learn for 4 months. He was
-                        able to identify my mistakes and find practical ways to practice to improve. Highly recommend
-                        this school.</p>
-                    <a target="_blank"
-                        href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"
-                        class="btn buttonGeneral btn-primary rounded-pill  py-2 px-4">
-                        see the review </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+<script type="module">
+  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+  const keenSlider = new KeenSlider(
+    '#keen-slider',
+    {
+      loop: true,
+      slides: {
+        origin: 'center',
+        perView: 1.25,
+        spacing: 16,
+      },
+      breakpoints: {
+        '(min-width: 1024px)': {
+          slides: {
+            origin: 'auto',
+            perView: 1.5,
+            spacing: 32,
+          },
+        },
+      },
+    },
+    []
+  )
+
+  const keenSliderPrevious = document.getElementById('keen-slider-previous')
+  const keenSliderNext = document.getElementById('keen-slider-next')
+
+  const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
+  const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
+
+  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+  keenSliderNext.addEventListener('click', () => keenSlider.next())
+
+  keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
+  keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
+</script>
+
+<section class="bg-yellow-400 my-12 text-white">
+  <div class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
+      <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+<div class="w-full grid place-items-center sm:place-items lg:justify-start">    
+    <div style="width: 200px; height: 200px;">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+        <dotlottie-player src="https://lottie.host/562e861f-13a7-4517-a8a1-c8d98f9942eb/ZoCfCIuoc2.json" background="transparent" speed="0.5" loop autoplay></dotlottie-player>
+    </div>
+  </div>
+       
+        <h2 class="text-3xl text-ceneter lg:text-left font-bold text-capitalize tracking-tight text-gray-900 sm:text-4xl">
+          Don't just take our word for it...
+        </h2>
+
+        
+
+        <div class="hidden lg:mt-8  place-items-center lg:flex lg:gap-4">
+          <button
+            aria-label="Previous slide"
+            id="keen-slider-previous-desktop"
+            class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-gray-900 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5 rtl:rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+
+          <button
+            aria-label="Next slide"
+            id="keen-slider-next-desktop"
+            class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-gray-900 hover:text-white"
+          >
+            <svg
+              class="h-5 w-5 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="-mx-6 rounded-2xl overflow-hidden lg:col-span-2 lg:mx-0">
+        <div id="keen-slider" class="keen-slider">
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">alberto colombo</h5>
-                    <p class="mt-2 mb-0">Scuola di kite molto professionale! Migo l istruttore insieme al suo team sono
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Andre Pinheiro</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    Best possible kiting experience in Hurghada. Mego is friendly, patient and
+                    teaches very well. I've tried different teachers in my life and he is by far the best one. More
+                    than a teacher, I made a good friend. If you want to learn, refresh or just have fun with kite,
+                    he is your best choice in Hurghada.
+                  </p>
+                </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Michael Scott
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">alberto colombo</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    Scuola di kite molto professionale! Migo l istruttore insieme al suo team sono
                         persone disponibili, qualificate e simpatiche! Lo spot è veramente bello! Se siete in vacanza in
                         zona e volete fare kite dovete passare di qui!
                     </p>
-                    <a target="_blank"
-                        href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"
-                        class="btn buttonGeneral btn-primary rounded-pill  py-2 px-4">
-                        see the review </a>
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Юлия Приходько</h5>
-                    <p class="mt-2 mb-0">Взяла курс из трёх занятий по виндсёрфингу в этой школе. Было классно! На
-                        третье занятие я уже сама шла под парусом в заливе, это очень круто! Спасибо тренерам Миго и
-                        Ясеру, они здорово все объясняют и показывают, ребята, я буду по вам скучать и ещё вернусь!
-                        Начало положено!</p>
-                    <a target="_blank"
-                        href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"
-                        class="btn buttonGeneral btn-primary rounded-pill  py-2 px-4">
-                        see the review </a>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Michael Scott
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg"
-                        style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Andre Pinheiro</h5>
-                    <p class="mt-2 mb-0">Best possible kiting experience in Hurghada. Mego is friendly, patient and
-                        teaches very well. I've tried different teachers in my life and he is by far the best one. More
-                        than a teacher, I made a good friend. If you want to learn, refresh or just have fun with kite,
-                        he is your best choice in Hurghada.</p>
-                    <a target="_blank"
-                        href="https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m16!1m7!3m6!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!2sKite+fly+school+hurghada!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g!3m7!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!9m1!1b1!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu"
-                        class="btn btn-primary rounded-pill  py-2 px-4">
-                        see the review </a>
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Tina Burkhardt</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    Kitefly and nothing regretted. Very relaxed coaches who radiate calm and explain everything patiently. Within 4 hours I even had a success and I was able to start and surf some meters in both directions. Thank you Mego and the whole team for this funny hours and a lot of smiling </p>
                 </div>
-            </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Michael Scott
+              </footer>
+            </blockquote>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div class="mt-8 flex justify-center gap-4 lg:hidden">
+      <button
+        aria-label="Previous slide"
+        id="keen-slider-previous"
+        class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+      >
+        <svg
+          class="h-5 w-5 -rotate-180 transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+      </button>
+
+      <button
+        aria-label="Next slide"
+        id="keen-slider-next"
+        class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+      >
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
     <section class="my-12  mb-20">
-        <div class="container">
-          <a href="/" class="relative block hover:shadow-lg duration-500 shadow-yellow-400  rounded-3xl ">
-            <div class="h-[400px] lg:h-[400px] object-cover   overflow-hidden rounded-3xl">
-              <div class="absolute inset-0 z-10 md:hidden"></div>
-            <iframe
-                width="100%"
-                height="100%"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen
-                loading="lazy"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26.9865756!2d33.9083053!3d26.9865756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z26.9865756!3z33.9083053!5e0!3m2!1sen!2sus"
-            ></iframe>
-            
-            </div>
-      
-            <div class="absolute z-10 right-8 left-8 sm:right-12 sm:left-12 md:left-16 lg:left-20 md:right-16 lg:right-20 top-8 sm:top-12 md:top-auto md:bottom-1/2 md:translate-y-1/2 md:text-left">
-              <h2 class="font-bold text-capitalize sm:font-normal text-white/80 md:mb-2 w-[180px] sm:w-[350px] md:mx-0 text-2xl sm:text-4xl xl:text-5xl leading-7">
-               See us on the map ✨
-              </h2>
-              <p class="mb-4 text-xs text-white/80 sm:mb-5 sm:text-base">
-               Piano Diving Club, Hurghada, Red Sea, Egypt
-              </p>
-              <button class="px-6 py-2 text-sm font-medium text-white bg-yellow-500 rounded-lg sm:text-base sm:py-3">
-                Get Directions
-              </button>
-            </div>
-          </a>
+        <div class="container ">
+            <a href="/" class="relative block hover:shadow-lg duration-500 shadow-yellow-400  rounded-3xl ">
+                <div class="h-[400px] lg:h-[400px] object-cover   overflow-hidden rounded-3xl">
+                    <div class="h-full rounded-2xl overflow-hidden w-full bg-gradient-to-r from-black to-transparent absolute">
+
+                    </div>
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        style="border: 0"
+                        allowfullscreen
+                        loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26.9865756!2d33.9083053!3d26.9865756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z26.9865756!3z33.9083053!5e0!3m2!1sen!2sus&z=8"
+                    ></iframe>
+                    
+                </div>
+
+                <div class="absolute  z-10 right-8 left-8 sm:right-12 sm:left-12 md:left-16 lg:left-20 md:right-16 lg:right-20 top-8 sm:top-12 md:top-auto md:bottom-1/2 md:translate-y-1/2 md:text-left">
+                   
+                    <div class="">
+                        <h2 class="font-bold text-capitalize sm:font-normal text-white/80 md:mb-2 w-[180px] sm:w-[350px] md:mx-0 text-2xl sm:text-4xl xl:text-5xl leading-7">
+                            See us on the map ✨
+                        </h2>
+                        <p class="mb-4 text-xs text-white/80 sm:mb-5 sm:text-base">
+                            Piano Diving Club, Hurghada, Red Sea, Egypt
+                        </p>
+                        <button class="px-6 py-2 text-sm font-medium text-white bg-yellow-500 rounded-lg sm:text-base sm:py-3">
+                            Get Directions
+                        </button>
+                    </div>
+                </div>
+            </a>
         </div>
-      </section>
+    </section>
       
 
 
