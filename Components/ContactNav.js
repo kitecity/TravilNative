@@ -1,5 +1,5 @@
 // Data
-const componentData = {
+/*const componentData = {
     address: {
         href: "https://www.google.com.eg/maps/place/Kite+fly+school+hurghada/@26.9865734,33.9082233,15z/data=!4m6!3m5!1s0x144d7df45aa2b593:0x4de776de3ce79e8a!8m2!3d26.9865734!4d33.9082233!16s%2Fg%2F11r_y0mr5g?hl=ar-eg&entry=ttu",
         text: "Makadi Bay, Hurghada, Egypt"
@@ -18,7 +18,7 @@ const componentData = {
     instagram: {
         href: "https://instagram.com/kite_fly_school_egy?igshid=MzNlNGNkZWQ4Mg=="
     }
-};
+};*/
 
 // Component
 function createComponent() {

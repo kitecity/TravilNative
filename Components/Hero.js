@@ -4,7 +4,7 @@ const heroContent = {
     title: "Adventure Unleashed Dive into Watersport Thrills.",
     description: "Explore excitement with Kiteboarding, Windsurfing, Stand up Biddle, and Wakeboarding Water Ski. Thrilling courses and rentals await your watersport adventure.",
     ctaText: "Start your adventure",
-    ctaLink: "#",
+    ctaLink: "/service.html",
     learnMoreText: "Learn more",
     learnMoreLink: "#"
 };
